@@ -1,0 +1,88 @@
+/* vh, vw などのviewportに対する高さ幅は、調整が難しい！ */
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    /* 縦横中央揃えの手法の一つ
+    display:grid+place-items: center
+    place-items: 横　縦  の指定ができるが、値を一つにすればどちらも指定することに */
+    display: grid;
+    place-items: center;
+    /* 表示画面いっぱいに使う */
+    /* height: 100vh; */
+    background: #000;
+}
+
+div{
+    /* 内側の余白 */
+    padding:2rem;
+    /* 各要素の四隅を丸く */
+    border-radius: 1rem;
+    background: #FFF;
+    width: 14rem;
+    box-shadow: 5px 5px 0.4rem rgba(200,0,0,.3);
+}
+
+/* .class名{  ;}でclass 設定をテンプレ化
+html内で class="btn_test"と指定する必要あり */
+.btn_test{
+    text-align: center;
+    /* block: 文末で改行される */
+    display: inline-block;
+    background-color: #7069ad;
+    width: 200px;
+    border-radius: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    /* repeatを着け忘れない！repeat(, px) */
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    /* 行間 */
+    gap: 2px 2px;
+    background-color: antiquewhite;
+}
+
+.parent {
+    height: 42vh;
+}
+.parent2 {
+    height: 20vh;
+}
+
+.item (
+    height: 1%;
+)
+
+.itemBottom{
+    place-items: center end;
+}
+
+  /* #id名{    ;} でidの設定*/
+#g1 { background-color: aqua;
+    grid-column: 2/4;
+    grid-row: 1/2;;
+}#g2 { background-color: aqua;
+}
+#watasi {color: blue;}
+.griditem{
+    background-color: aqua;
+    display: grid;
+    place-items: center;
+}
+
+
+
+footer{
+    width: 120%;
+    height: 100px;
+    background-color: #174a5c;
+    color: white;
+    text-align: center;
+}
+
+#colorText{
+    background-color: #b65d5d;
+    width: 100vw;
+}

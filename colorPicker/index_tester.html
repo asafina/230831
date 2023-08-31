@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charaset="UTF-8">
+    <!-- 見やすいサイトにするための、標準的な初期設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーピッカー</title>
+    <!-- cssファイルの参照 -->
+    <!-- rel=relation: ファイルとの関係性 -->
+    <!-- href: ファイルの場所指定 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- defer: DOM構築を止めず、バックグラウンドでロードし、DOM構築が終わった後に実行 -->
+    <!-- defer はsrcで外部スクリプトを読み込む時のみ使用可能 -->
+    <!-- async: バックグラウンドでロードし、ロード完了時に即座に実行 -->
+    <!-- asyncは、広告・カウンターなどのサードパーティスクリプトによく使われる -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+    <center>
+        <a class="parent">
+        <h1 id="colorText">カラーコードを検索</h1>
+        </a>
+        <div class="parent">
+        <h1 id="colorText">カラーコードを検索</h1>
+        <br>
+        <br>
+        <input id="colorPicker" type="color">
+        <br>
+        <br>
+        <div class="griditem" style="width: 50px">Grid Item2</div>
+    </center>
+    <!-- block自体を中心に表示するには、divで全体を囲う -->
+    </div>
+    <div class="parent2">
+        <a id="watasi">私は、</a><a id="anata" style="display: none">あなたは、</a><a>AIです。aaaaaaaaaaaaaaaaaaaaaa</a>
+        <br>
+        <br><center>
+            <a id="btnTest" class="btn_test" href="https://www.google.com/search?q=%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%82%AF%E3%82%A8%E3%83%AA&sourceid=chrome&ie=UTF-8">ここをクリック</a>
+        </center>
+    </div> 
+    <br>
+
+    <div class="grid-container">
+        <div id="g1" class="griditem">Grid Item1</div>
+        <div class="griditem">Grid Item2</div>
+        <div class="griditem">Grid Item3</div>
+        <div class="griditem">Grid Item1</div>
+        <div class="griditem">Grid Item2</div>
+        <div class="griditem">Grid Item3</div>
+        <div class="griditem">Grid Item4</div>
+      </div>
+      <br>
+    <footer>
+        <p>adfadfa</p>
+</footer>
+    <script>
+        const $watasi=document.getElementById('watasi');
+        const $anata=document.getElementById('anata');
+        $watasi.addEventListener('click', () =>{
+            $watasi.style.display="none";
+            $anata.style.display="inline-block";
+            $anata.style.height="50px";
+            window.setTimeout(
+                function(){
+                    $anata.style.color="#ff0000";
+                }    
+            , 1000);
+
+        });
+    </script>
+</body>
+</html>

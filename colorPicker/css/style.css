@@ -1,0 +1,24 @@
+/* vh, vw などのviewportに対する高さ幅は、調整が難しい！ */
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    /* 縦横中央揃えの手法の一つ
+    display:grid+place-items: center
+    place-items: 横　縦  の指定ができるが、値を一つにすればどちらも指定することに */
+    display: grid;
+    place-items: center;
+    /* 表示画面いっぱいに使う */
+    height: 70vh;
+    background: #000;
+}
+
+div{
+    /* 内側の余白 */
+    padding:2rem;
+    /* 各要素の四隅を丸く */
+    border-radius: 1rem;
+    background: #FFF;
+    width: 18rem;
+    box-shadow: 5px 5px 0.4rem rgba(200,0,0,.3);
+}

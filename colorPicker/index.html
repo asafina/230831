@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charaset="UTF-8">
+    <!-- 見やすいサイトにするための、標準的な初期設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カラーピッカー</title>
+    <!-- cssファイルの参照 -->
+    <!-- rel=relation: ファイルとの関係性 -->
+    <!-- href: ファイルの場所指定 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- defer: DOM構築を止めず、バックグラウンドでロードし、DOM構築が終わった後に実行 -->
+    <!-- defer はsrcで外部スクリプトを読み込む時のみ使用可能 -->
+    <!-- async: バックグラウンドでロードし、ロード完了時に即座に実行 -->
+    <!-- asyncは、広告・カウンターなどのサードパーティスクリプトによく使われる -->
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+    <div>
+        <p id="colorText">カラーコードを検索</p>
+        <a id="colorDisplay" style="display: none">aa</a>
+        <br>
+        
+        <br>
+        <input id="colorPicker" type="color">
+    </div>
+</body>
+</html>
